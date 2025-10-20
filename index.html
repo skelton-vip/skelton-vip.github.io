@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skelton VIP | Digital Architecture & Cybersecurity</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* GitHub Dark Theme Background */
+        }
+        /* Updated Neon Glow to Gold */
+        .neon-glow {
+            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .card-bg {
+            background-color: #161b22; /* Slightly lighter dark background for cards */
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Container -->
+    <div id="app" class="w-full max-w-4xl shadow-2xl rounded-2xl overflow-hidden card-bg transition-all duration-500">
+
+        <!-- Header and Navigation -->
+        <header class="p-6 border-b border-amber-700/50 flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-4xl font-extrabold text-amber-400 neon-glow mb-4 sm:mb-0">
+                Skelton VIP
+            </h1>
+            <nav class="flex space-x-4">
+                <button onclick="navigateTo('home')" id="nav-home" class="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border border-transparent hover:border-amber-400 hover:bg-amber-900/30">
+                    Home
+                </button>
+                <button onclick="navigateTo('madness')" id="nav-madness" class="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 bg-amber-600 hover:bg-amber-700 text-gray-900 shadow-lg shadow-amber-500/50">
+                    Madness (Tools)
+                </button>
+            </nav>
+        </header>
+
+        <!-- Page Content Wrapper -->
+        <main class="p-8">
+
+            <!-- HOME PAGE (Initially visible) -->
+            <section id="page-home" class="page-content space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-50">
+                        Digital Architecture Meets Defense.
+                    </h2>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                        We are engineers of specialized software tools and innovative applications. While our foundation lies in crafting efficient digital solutions, we are actively pivoting towards developing **robust, open-source utilities** focused on modern **cybersecurity** and network defense challenges.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 pt-4">
+                    <!-- Feature Card 1 -->
+                    <div class="p-6 rounded-xl border border-gray-700/50 hover:border-amber-500 transition-all duration-300 hover:shadow-amber-900 shadow-xl">
+                        <h3 class="text-xl font-semibold text-amber-400 mb-2">Cyber Focus</h3>
+                        <p class="text-gray-400 text-sm">
+                            From threat intelligence gathering to lightweight system auditing, our new tools are built to empower developers and security researchers.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="p-6 rounded-xl border border-gray-700/50 hover:border-amber-500 transition-all duration-300 hover:shadow-amber-900 shadow-xl">
+                        <h3 class="text-xl font-semibold text-amber-400 mb-2">Craftsmanship</h3>
+                        <p class="text-gray-400 text-sm">
+                            Every application is built with an obsession for efficiency, minimal overhead, and clean, auditable code. Performance is paramount.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-6 text-center">
+                    <button onclick="navigateTo('madness')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-gray-900 bg-amber-500 hover:bg-amber-400 shadow-xl shadow-amber-500/40 transition duration-300 transform hover:scale-[1.02]">
+                        Explore the Madness (Our Tools) &rarr;
+                    </button>
+                </div>
+            </section>
+
+            <!-- MADNESS PAGE (Initially hidden) -->
+            <section id="page-madness" class="page-content hidden space-y-6">
+                <h2 class="text-3xl font-bold text-amber-400 border-b border-gray-700 pb-3">
+                    The Madness: Apps & Tools
+                </h2>
+                <p class="text-gray-400">
+                    A curated collection of digital utilities and experimental tools covering everything from system analysis to specialized data processing.
+                </p>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+
+                    <!-- Tool Card 1: Cybersecurity -->
+                    <a href="#" class="block p-5 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 card-bg hover:shadow-2xl hover:shadow-yellow-900/50">
+                        <span class="text-2xl mb-2 inline-block">🛡️</span>
+                        <h3 class="text-lg font-semibold text-yellow-300">Cipher Forge</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            A suite of cryptographic testing and encoding/decoding utilities for rapid security assessment.
+                        </p>
+                    </a>
+
+                    <!-- Tool Card 2: Utility -->
+                    <a href="#" class="block p-5 rounded-xl border border-gray-700 hover:border-fuchsia-500 transition-all duration-300 card-bg hover:shadow-2xl hover:shadow-fuchsia-900/50">
+                        <span class="text-2xl mb-2 inline-block">🔗</span>
+                        <h3 class="text-lg font-semibold text-fuchsia-300">Packet Whisperer</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            A lightweight network monitoring and traffic visualization tool for local debugging.
+                        </p>
+                    </a>
+
+                    <!-- Tool Card 3: Cybersecurity -->
+                    <a href="#" class="block p-5 rounded-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 card-bg hover:shadow-2xl hover:shadow-teal-900/50">
+                        <span class="text-2xl mb-2 inline-block">🔬</span>
+                        <h3 class="text-lg font-semibold text-teal-300">Sentinel Scan</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            A modular endpoint scanning utility to detect common misconfigurations and exposures.
+                        </p>
+                    </a>
+
+                    <!-- Tool Card 4: Utility -->
+                    <a href="#" class="block p-5 rounded-xl border border-gray-700 hover:border-sky-500 transition-all duration-300 card-bg hover:shadow-2xl hover:shadow-sky-900/50">
+                        <span class="text-2xl mb-2 inline-block">⚙️</span>
+                        <h3 class="text-lg font-semibold text-sky-300">Audit Agent</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Automated log analysis and reporting agent built for rapid feedback loop integration.
+                        </p>
+                    </a>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        /**
+         * Simple Single Page Application (SPA) Router
+         * Toggles visibility of sections based on navigation.
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check the URL hash on load (e.g., skelton.vip/#madness)
+            const initialPage = window.location.hash.substring(1) || 'home';
+            navigateTo(initialPage);
+        });
+
+        function navigateTo(pageId) {
+            const validPages = ['home', 'madness'];
+            if (!validPages.includes(pageId)) {
+                pageId = 'home';
+            }
+
+            // 1. Hide all pages
+            document.querySelectorAll('.page-content').forEach(section => {
+                section.classList.add('hidden');
+                section.setAttribute('aria-hidden', 'true');
+            });
+
+            // 2. Show the target page
+            const targetSection = document.getElementById('page-' + pageId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+                targetSection.setAttribute('aria-hidden', 'false');
+            }
+
+            // 3. Update active navigation styling
+            // Removed specific color classes before checking the active page
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('bg-amber-800/50', 'text-amber-400', 'shadow-inner');
+                // Ensure madness button reverts to its default styling when not active
+                if (btn.id === 'nav-madness') {
+                    btn.classList.remove('bg-amber-600', 'hover:bg-amber-700', 'text-gray-900', 'shadow-lg', 'shadow-amber-500/50', 'border-amber-400');
+                    btn.classList.add('bg-amber-600', 'hover:bg-amber-700', 'text-gray-900', 'shadow-lg', 'shadow-amber-500/50');
+                }
+            });
+
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                if (pageId === 'madness') {
+                     // For 'Madness', keep the original striking button style
+                    activeBtn.classList.add('bg-amber-600', 'hover:bg-amber-700', 'text-gray-900', 'shadow-lg', 'shadow-amber-500/50');
+                    activeBtn.classList.remove('border-amber-400', 'hover:border-amber-400', 'hover:bg-amber-900/30'); // Remove the subtle home styles
+                } else {
+                    // For 'Home', use a subtle active highlight
+                    activeBtn.classList.add('bg-amber-800/50', 'text-amber-400', 'shadow-inner', 'border-amber-400');
+                    // Ensure the madness button returns to its non-active state
+                    document.getElementById('nav-madness').classList.remove('bg-amber-800/50', 'text-amber-400', 'shadow-inner');
+                    document.getElementById('nav-madness').classList.add('bg-amber-600', 'hover:bg-amber-700', 'text-gray-900', 'shadow-lg', 'shadow-amber-500/50');
+                }
+            }
+
+            // 4. Update URL hash
+            window.history.pushState(null, '', '#' + pageId);
+        }
+    </script>
+</body>
+</html>
